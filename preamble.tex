@@ -1,0 +1,220 @@
+% ------------------------------------------------------------ %
+% TIPO Y PAQUETES                                              %
+% ------------------------------------------------------------ %
+
+\documentclass[11pt, a4paper]{report}
+\usepackage[spanish, es-tabla, activeacute]{babel}
+% \usepackage[utf8]{inputenc}
+\usepackage[pagestyles]{titlesec}
+\usepackage[hidelinks]{hyperref}
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{indentfirst}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{keyval}
+\usepackage{etoolbox}
+\usepackage{fontspec}
+\usepackage{titling}
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage{chngcntr}
+\usepackage{listings}
+\usepackage[bottom]{footmisc}
+\usetikzlibrary{positioning}
+
+\definecolor{eus-color}{gray}{0.4}
+\definecolor{eng-color}{gray}{0.5}
+
+\definecolor{code-background}{rgb}{0.95,0.95,0.92}
+\definecolor{code-comments}{gray}{0.6}
+\definecolor{code-color}{gray}{0.3}
+
+\newcommand*{\noaddvspace}{\renewcommand*{\addvspace}[1]{}}
+\addtocontents{lof}{\protect\noaddvspace}
+\addtocontents{lot}{\protect\noaddvspace}
+
+% ------------------------------------------------------------ %
+% NUMERACIÓN CONTINUA DE FIGURAS Y TABLAS                      %
+% ------------------------------------------------------------ %
+
+\counterwithout{figure}{chapter}
+\counterwithout{table}{chapter}
+
+% ------------------------------------------------------------ %
+% PARTICIÓN DE PALABRAS AL FINAL DE LÍNEA                      %
+% ------------------------------------------------------------ %
+
+\pretolerance=2000
+\tolerance=3000
+
+% ------------------------------------------------------------ %
+% FUENTES DEL DOCUMENTO                                        %
+% ------------------------------------------------------------ %
+
+ \setmainfont[
+ Path          = fonts/,
+ Ligatures     = TeX,
+ UprightFont   = EHUSans-Light.otf,
+ BoldItalicFont= EHUSans-BoldItalic.otf,
+ BoldFont      = EHUSans-Bold.otf,
+ ItalicFont    = EHUSans-LightItalic.otf
+ ]{EHUSans}
+ 
+ \setmonofont[
+ Path          = fonts/,
+ UprightFont   = UbuntuMono-Regular.ttf,
+ BoldItalicFont= UbuntuMono-BoldItalic.ttf,
+ BoldFont      = UbuntuMono-Bold.ttf,
+ ItalicFont    = UbuntuMono-Italic.ttf
+ ]{UbuntuMono}
+
+\newfontfamily{\sansthick}[
+ Path          = fonts/,
+ BoldFont      = EHUSans-Bold.otf,
+ UprightFont   = EHUSans-Regular.otf
+ ]{EHUSans}
+ 
+ \newfontfamily{\sansblack}[
+ Path          = fonts/,
+ UprightFont   = EHUSans-Black.otf
+ ]{EHUSans}
+ 
+ \newfontfamily{\serif}[
+ Path          = fonts/,
+ Ligatures     = TeX,
+ UprightFont   = EHUSerif-Light.otf,
+ BoldItalicFont= EHUSerif-BoldItalic.otf,
+ BoldFont      = EHUSerif-Bold.otf,
+ ItalicFont    = EHUSerif-LightItalic.otf
+ ]{EHUSerif}
+  
+ \newfontfamily{\serifthick}[
+ Path          = fonts/,
+ BoldFont      = EHUSerif-Bold.otf,
+ UprightFont   = EHUSerif-Regular.otf
+ ]{EHUSerif}
+ 
+ \newfontfamily{\serifblack}[
+ Path          = fonts/,
+ UprightFont   = EHUSerif-Black.otf
+ ]{EHUSerif}
+ 
+% ------------------------------------------------------------ %
+% BLOQUES DE CÓDIGO                                            %
+% ------------------------------------------------------------ %
+
+\lstset{
+    backgroundcolor=\color{code-background},
+    commentstyle=\color{code-comments},
+    basicstyle=\ttfamily\small\color{code-color},
+    framexrightmargin=5pt,
+    framexleftmargin=5pt,
+    framextopmargin=6pt,
+    framexbottommargin=6pt, 
+    frame=tb, framerule=0pt,
+}
+
+% ------------------------------------------------------------ %
+% ETIQUETAS EN LAS TABLAS Y FIGURAS							   %
+% ------------------------------------------------------------ %
+
+\DeclareCaptionFont{ehu}{\fontsize{9}{10}\mdseries}
+\usepackage[font={ehu}, labelfont={bf}]{caption}
+
+% ------------------------------------------------------------ %
+% AÑADIR CUARTO NIVEL DE TÍTULO                                %
+% ------------------------------------------------------------ %
+
+\setcounter{secnumdepth}{4}
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+% ------------------------------------------------------------ %
+% ELIMINAR CABECERA DE CAPÍTULOS                               %
+% ------------------------------------------------------------ %
+
+\titleformat{\chapter}%
+  {\normalfont\bfseries\Huge}{\thechapter.}{10pt}{}
+\newpagestyle{mystyle}{
+  \sethead[][\thechapter.\enspace\chaptertitle][]{}{\thesection~\sectiontitle}{}
+\setfoot{}{\thepage}{}}
+
+% ------------------------------------------------------------ %
+% MÁRGENES Y DISTANCIA ENTRE PÁRRAFOS						   %
+% ------------------------------------------------------------ %
+
+\geometry{top=2.5cm,left=3cm,right=3cm,bottom=2.5cm}
+\setlength{\parskip}{8pt}
+
+% ------------------------------------------------------------ %
+% TÍTULO DEL ÍNDICE                                            %
+% ------------------------------------------------------------ %
+
+\addto\captionsspanish{
+	\renewcommand{\contentsname}{Índice}
+	\renewcommand{\listtablename}{Lista de tablas}
+	\renewcommand{\listfigurename}{Lista de figuras}
+}
+
+% ------------------------------------------------------------ %
+% DIRECTORIO DE IMÁGENES                                       %
+% ------------------------------------------------------------ %
+
+\graphicspath{{images/}}
+
+% ------------------------------------------------------------ %
+% FORMATO DEL TÍTULO                                           %
+% El documento principal debe incluir este código:             %
+% Título:
+% \newcommand{\titulo}{<Título del trabajo>}
+% % Nombre del Máster:
+% \newcommand{\tituloMaster}{XXXXXXXXXX} 
+% % Alumno/Alumna:
+% \newcommand{\estudiante}{<Apellido 1, Apellido 2, Nombre>}
+% % Dirección del TFG:
+% \newcommand{\direccion}{<Apellido 1, Apellido 2, Nombre>}
+% % Departamento:
+% \newcommand{\departamento}{<Departamento>}
+% % Curso académico:
+% \newcommand{\curso}{<Curso>} 
+% % Fecha:
+% \newcommand{\fecha}{Bilbao, X de XXXX de 2020}
+% ------------------------------------------------------------ %
+
+\newcommand{\portada}{
+	{\raggedleft\includegraphics[width=8cm]{corp/ehu}}
+	\\
+	{\LARGE\textbf{\MakeUppercase{Máster universitario en}}}\\[\baselineskip]
+	{\LARGE\textbf{\tituloMaster}}
+	\\[3\baselineskip]
+	\begin{center}
+		\Huge{\textbf{\MakeUppercase{Trabajo fin de Máster}}}
+		\\[1\baselineskip]
+		\begin{tikzpicture}
+			\renewcommand{\baselinestretch}{0.75}
+			\node (A) at (0.03cm,-0.03cm) [inner sep=20pt, draw, minimum width=\linewidth, text width=13cm, minimum height=104pt, fill=black, align=center]
+			{\huge{\MakeUppercase{\textbf{\textit{\titulo}}}}};
+			\node (B) at (0,0) [inner sep=20pt, draw, minimum width=\linewidth, text width=13cm, minimum height=104pt, fill=white, align=center] 
+			{\huge{\MakeUppercase{\textbf{\textit{\titulo}}}}};
+		\end{tikzpicture}
+	\end{center}
+	\renewcommand{\baselinestretch}{1.25}
+	\begin{tikzpicture}[remember picture, overlay]
+		\node (C) at ([yshift=-4.95cm, xshift=14.5cm]current page.west) [inner sep=10pt, thick, minimum width=13.34cm, minimum height=64pt, align=left, fill=white]{};
+		\node (D) [right=0.2cm of C.west, anchor=west, align=left]
+		{\small{\textbf{Estudiante: }\estudiante}\\
+			\small{\textbf{Director/a: }\direccion}\\
+			\small{\textbf{Departamento: }\departamento}\\
+			\small{\textbf{Curso académico: }\curso}
+			};
+	\end{tikzpicture}
+	\renewcommand{\baselinestretch}{1}
+	\begin{tikzpicture}[remember picture, overlay]
+		\node (G) at ([yshift=-10.6cm, xshift=14cm]current page.west) [inner sep=10pt, thick, minimum width=7.93cm, minimum height=27pt, align=left, fill=white]{};
+		\node (H) [left=0.2cm of G.east, anchor=east]
+		{\small{\textit{\fecha}}};
+	\end{tikzpicture}
+}

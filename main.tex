@@ -1,0 +1,89 @@
+% ------------------------------------------------------------ %
+% DATOS DEL DOCUMENTO                                          %
+% ------------------------------------------------------------ %
+
+% Título:
+\newcommand{\titulo}{<Título del trabajo>}
+% Nombre del Máster:
+\newcommand{\tituloMaster}{XXXXXXXXXX} 
+% Alumno/Alumna:
+\newcommand{\estudiante}{<Apellido 1, Apellido 2, Nombre>}
+% Dirección del TFG:
+\newcommand{\direccion}{<Apellido 1, Apellido 2, Nombre>}
+% Departamento:
+\newcommand{\departamento}{<Departamento>}
+% Curso académico:
+\newcommand{\curso}{<Curso>} 
+% Fecha:
+\newcommand{\fecha}{Bilbao, X de XXXX de 2020}
+% ------------------------------------------------------------ %
+
+\input{preamble.tex}
+
+% ------------------------------------------------------------ %
+
+\begin{document}
+	
+	\portada
+	\thispagestyle{empty}
+	\setcounter{page}{0}
+	
+	% RESUMEN:
+	\include{src/abstract}	
+	\pagebreak
+	
+	\setcounter{tocdepth}{1}
+	\tableofcontents
+	
+	% ÍNDICES:
+	\cleardoublepage
+	\phantomsection
+	\addcontentsline{toc}{chapter}{\listfigurename}
+	\listoffigures % Lista de figuras
+	
+	\cleardoublepage
+	\phantomsection
+	\addcontentsline{toc}{chapter}{\listtablename}
+	\listoftables % Lista de tablas
+	
+	\cleardoublepage
+	\include{src/acronimos} % Lista de acrónimos
+	
+	% MEMORIA:
+	
+	\include{src/intro} % 1p
+	\include{src/contexto} % 1-3p
+	%	\include{src/estadodelarte} % 4-6p
+	\include{src/objetivos} % 1-2p
+	\include{src/beneficios} % 2-3p
+	\include{src/alternativas} % 4-6p
+	%	\include{src/riesgos} % 4-6p
+	\include{src/solucion} % 1-2p / - / - / 5p
+	
+	% METODOLOGÍA SEGUIDA EN EL DESARROLLO DEL TRABAJO:
+	
+	\include{src/gantt} % 2p
+	% 	\include{src/algoritmos} % ?
+	%	\include{src/resultados} % ?
+	% 	\include{src/planificacion} % ?
+	
+	% ASPECTOS ECONÓMICOS:
+	
+	\include{src/presupuesto} % 2p
+	%	\include{src/rentabilidad} % 2p
+	
+	% CONCLUSIONES:
+	
+	\include{src/conclusiones} % 1p
+	
+	% BIBLIOGRAFÍA:
+	
+	\include{src/bibliografia}
+	
+	% ANEXOS:
+	
+	%	\include{src/normativa}
+	%	\include{src/planos}
+	%	\include{src/manuales}
+	
+\end{document}

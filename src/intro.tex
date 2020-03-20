@@ -1,0 +1,91 @@
+\chapter{Introducción}
+
+Lorem ipsum \textbf{dolor sit amet}, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea \textbf{commodo consequat}. Duis aute irure dolor in \textbf{reprehenderit} in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+
+\textbf{Consulta la figura \ref{fig:devops}.}
+
+\begin{figure}[!ht]
+  \centering
+  \includegraphics[width=0.5\linewidth]{corp/ehu}
+  \caption{Título de la figura.}
+  \label{fig:devops}
+\end{figure}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+\begin{table}[h!]
+  \centering
+  \begin{tabular}{llll}
+    \textbf{Nombre} & \textbf{Medida 1} & \textbf{Medida 2} & \textbf{Medida 3} \\
+    \textbf{Test 1} & 2.5               & 3.6               & 4.7               \\
+    \textbf{Test 2} & 5.2               & 0.6               & 0.8               \\
+    \textbf{Test 3} & 1.5               & 1.6               & 1.6              
+  \end{tabular}
+  \caption{Título de la tabla.}
+\end{table}
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+\textbf{Puedes citar en cualquier momento todo aquello que hayas añadido a tu bibliografía \cite{ref-1}.}
+
+\pagebreak
+
+\begin{lstlisting}[language=Python]
+    import re
+    for test_string in ['555-1212', 'ILL-EGAL']:
+        if re.match(r'^\d{3}-\d{4}$', test_string):
+            print (test_string, 'is a valid US local phone number')
+        else:
+            print (test_string, 'rejected')
+\end{lstlisting}
+
+\begin{lstlisting}[language=Java]
+    import java.io.*;  
+    public class FileDemo {  
+        public static void main(String[] args) {  
+      
+            try {  
+                File file = new File("javaFile123.txt");  
+                if (file.createNewFile()) {  
+                    System.out.println("New File is created!");  
+                } else {  
+                    System.out.println("File already exists.");  
+                }  
+            } catch (IOException e) {  
+                e.printStackTrace();  
+            }  
+      
+        }  
+    }  
+\end{lstlisting}
+
+\begin{lstlisting}[language=Bash]
+    #!/bin/bash
+    
+    hello_world () {
+       echo 'hello, world'
+    }
+    
+    hello_world
+\end{lstlisting}
+
+\begin{lstlisting}[language=C]
+    #include <stdio.h>
+    #include <stdlib.h>
+    
+    int main()
+    {
+       int num;
+       FILE *fptr;
+    
+       fptr = fopen("C:\\program.txt","w");
+    
+       printf("Enter num: ");
+       scanf("%d",&num);
+    
+       fprintf(fptr,"%d",num);
+       fclose(fptr);
+    
+       return 0;
+    }
+\end{lstlisting}
