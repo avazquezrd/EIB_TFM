@@ -1,5 +1,5 @@
 
-# Plantilla para TFMs en $\LaTeX$
+# Plantilla para TFMs en LaTeX
 
 Plantilla para la edición del **Trabajo Fin de Máster** siguiendo la normativa de la Escuela de Ingeniería de Bilbao (UPV/EHU) y la [guía de expresión de marca de la UPV/EHU](https://www.ehu.eus/documents/10136/3950780/GUIA_EXPRESION_UPV_es.pdf/4d538337-2577-4260-ae02-d0fed29a26b5). 
 
@@ -7,7 +7,7 @@ Plantilla para la edición del **Trabajo Fin de Máster** siguiendo la normativa
 
 ## 📓 Portada
 
-En la parte superior del fichero `main.tex` se pueden editar y personalizar los datos relevantes de la portada, como el título del Máster o los nombres del estudiante y director o directora del TFM. **¡No es necesario tocar nada más 😀!**
+En la parte superior del fichero `main.tex` se pueden editar y personalizar los datos relevantes de la portada, como el título del Máster o los nombres del estudiante y director o directora del TFM. **¡No es necesario tocar nada más!**
 
 ```latex
 % Título:
@@ -46,4 +46,7 @@ Se utilizan como tipografías principales **EHUSans** y **EHUSerif**, [tipograf�
 Como tipografía monoespaciada (utilizada en bloques de código) se ha utilizado **Ubuntu Mono**.
 
 ---
+
+> Eres libre de utilizar, mejorar y compartir esta plantilla. 🤗
+
 <img src=https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/CC0_button.svg/1280px-CC0_button.svg.png height=35px>
