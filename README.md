@@ -47,6 +47,22 @@ Como tipografía monoespaciada (utilizada en bloques de código) se ha utilizado
 
 ---
 
-> Eres libre de utilizar, mejorar y compartir esta plantilla. 🤗
+## 🧻 Licencia
 
-<img src=https://upload.wikimedia.org/wikipedia/commons/thumb/6/69/CC0_button.svg/1280px-CC0_button.svg.png height=35px>
+```
+DO I LOOK LIKE I GIVE A SHIT PUBLIC LICENSE 
+Version 1, May 2020 
+
+Copyright (C) 2020 Adrián Vázquez
+
+Everyone is permitted to copy and distribute verbatim or modified 
+copies of this license document, and changing it is allowed as long 
+as the name is changed. 
+
+DO I LOOK LIKE I GIVE A SHIT PUBLIC LICENSE 
+TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION 
+
+0. I don't give a shit what you do, just don't bother me with it.
+
+1. I'm done with this shit, maintain it yourself.
+```
