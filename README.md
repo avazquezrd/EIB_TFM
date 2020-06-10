@@ -3,7 +3,7 @@
 
 Plantilla para la edición del **Trabajo Fin de Máster** siguiendo la normativa de la Escuela de Ingeniería de Bilbao (UPV/EHU) y la [guía de expresión de marca de la UPV/EHU](https://www.ehu.eus/documents/10136/3950780/GUIA_EXPRESION_UPV_es.pdf/4d538337-2577-4260-ae02-d0fed29a26b5). 
 
-> *Se recomienda trabajar con [Overleaf](https://es.overleaf.com) y utilizar `LuaLaTex` para la compilación.*
+> *Se recomienda trabajar con [Overleaf](https://es.overleaf.com) y utilizar `LuaLaTex` para la compilación. Asegúrate de que `main.tex` está seleccionado como documento principal.*
 
 ## 📓 Portada
 
