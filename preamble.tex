@@ -4,13 +4,12 @@
 
 \documentclass[11pt, a4paper]{report}
 \usepackage[spanish, es-tabla, activeacute]{babel}
-% \usepackage[utf8]{inputenc}
 \usepackage[pagestyles]{titlesec}
 \usepackage[hidelinks]{hyperref}
 \usepackage{graphicx}
 \usepackage{geometry}
 \usepackage{indentfirst}
-\usepackage{xcolor}
+\usepackage[table,xcdraw]{xcolor}
 \usepackage{verbatim}
 \usepackage{keyval}
 \usepackage{etoolbox}
@@ -21,7 +20,11 @@
 \usepackage{chngcntr}
 \usepackage{listings}
 \usepackage{float}
+\usepackage{graphicx}
+\usepackage{pifont}
+\usepackage{booktabs}
 \usepackage[bottom]{footmisc}
+\usepackage{multirow}
 \usetikzlibrary{positioning}
 
 \definecolor{eus-color}{gray}{0.4}
@@ -129,7 +132,7 @@
 
 \setcounter{secnumdepth}{4}
 \titleformat{\paragraph}
-{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+{\normalfont\normalsize\bfseries}{\theparagraph.}{1em}{}
 \titlespacing*{\paragraph}
 {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
 
@@ -188,8 +191,8 @@
 \newcommand{\portada}{
 	{\raggedleft\includegraphics[width=8cm]{corp/ehu}}
 	\\
-	{\LARGE\textbf{\MakeUppercase{Máster universitario en}}}\\[\baselineskip]
-	{\LARGE\textbf{\tituloMaster}}
+	{\LARGE\textbf{\MakeUppercase{Máster universitario en}}}\\[0.5\baselineskip]
+	{\LARGE\textbf{\MakeUppercase{\tituloMaster}}}
 	\\[3\baselineskip]
 	\begin{center}
 		\Huge{\textbf{\MakeUppercase{Trabajo fin de Máster}}}
